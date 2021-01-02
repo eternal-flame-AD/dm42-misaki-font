@@ -1,0 +1,55 @@
+{}
+LBL "SKANA"
+CLA
+INDEX "fntDt"
+1
+STOIJ
+1.00801
+STO "sknI"
+
+RCLEL
+STO "sknT"
+
+LBL 01
+RCL "sknT"
+256
+MOD
+XTOA
+STO- "sknT"
+256
+STO/ "sknT"
+ISG "sknI"
+GTO 01
+
+RCL "curY"
+RCL "curX"
+AGRAPH
+8
+STO+ "curX"
+
+RCL "ResX"
+RCL "curX"
+X>=Y?
+XEQ 02
+RCL "ResY"
+RCL "curY"
+X>=Y?
+XEQ 03
+GTO 99
+
+LBL 02
+8
+STO+ "curY"
+0
+STO "curX"
+RTN
+
+LBL 03
+0
+STO "curY"
+0
+STO "curX"
+RTN
+
+LBL 99
+END

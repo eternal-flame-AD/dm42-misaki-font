@@ -1,0 +1,18 @@
+{}
+LBL "SJISX"
+ENTER
+ENTER
+100
+MOD
+X<>Y
+100
+/
+IP
+1
+-
+94
+*
++
+XEQ "SKANA"
+RTN
+END
